@@ -37,13 +37,16 @@ Django Rest Framework 3.7.3
 
 ## Step by step guide to run this project
 
-* first download and extract the zip file.
-* open this folder inside VScode
-* open terminal and setup virtual enviroment by following steps
+* Download and extract the zip file.
+* Open this folder inside VScode
+* Open terminal and setup virtual enviroment by following steps
 
               python -m venv myenv
               myenv\Scripts\activate
               
-* install django and djangorestframework by following command
+* Install django and djangorestframework by following command
 
               pip install django==1.11.8 djangorestframework==3.7.3
+* Now run the following command to runserver
+
+              python manage.py runserver
