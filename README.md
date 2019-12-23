@@ -1,6 +1,6 @@
 # REST API using django and DRF for managing the users data
 
-## User should have the following attributes
+## User has the following attributes
 
 * ID
 * First Name
