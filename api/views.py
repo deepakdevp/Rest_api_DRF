@@ -23,8 +23,14 @@ class UserList(generics.ListCreateAPIView):
         if name is None and limit is None and sort_by_param is None and page is None:
             return Users.objects.all()
         else:
+            if name is None:
+                name = ""
+            if sort_by_param is None:
+                sort_by_param = "id"
+            if page is None:
+                page = 1
             queryset = Users.objects.filter(
-                Q(First_Name__contains=name) | Q(Last_Name__contains=name)).order_by(str(sort_by_param))[:limit]
+                Q(first_name__contains=name) | Q(last_name__contains=name)).order_by(str(sort_by_param))[:limit]
             paginator = Paginator(queryset, 5)
             users = paginator.page(page)
             return users
