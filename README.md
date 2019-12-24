@@ -47,6 +47,11 @@ Django Rest Framework 3.7.3
 * Install django and djangorestframework by following command
 
               pip install django==1.11.8 djangorestframework==3.7.3
+* Now do run the following command to save your model int the database.
+               
+              python manage.py makemigrations
+              python manage.py migrate
+              
 * Now run the following command to runserver
 
               python manage.py runserver
